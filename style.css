@@ -1,0 +1,407 @@
+@media (min-width: 900px) {
+  /* S'applique uniquement aux écrans larges */
+  body {
+    max-width: 1000px; /* Ajuste selon tes besoins */
+    margin: 0 auto; /* Centre le site */
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Style du menu */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-image: url('assets/menu-background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0px;
+  z-index: 1000;
+}
+
+/* Style des boutons */
+nav button {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background-color: transparent;
+  width: auto; /* Largeur du bouton */
+  height: auto; /* Hauteur du bouton */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 250px;
+}
+
+nav button img {
+  max-width: 100%; /* Ajuster la taille de l'image à l'intérieur du bouton */
+  max-height: 100%; /* Ajuster la taille de l'image à l'intérieur du bouton */
+  object-fit: contain; /* L'image s'ajuste sans être déformée ni coupée */
+}
+
+/* Fond sous le menu */
+body {
+  background-color: #f5e9cb;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Conteneur pour l'image du jeu */
+#game-image-container {
+  margin-top: 50px;
+  position: relative;
+  width: 100%;
+  display: block;
+  max-width: 1000px;
+  margin-top: 100px; /* Ajuste l'espace au-dessus de l'image */
+}
+
+/* Image du jeu */
+#game-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Image */
+#game-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Boutons placés sur l'image */
+.brefactions1,
+.brefactions2,
+.brefpouvoirs {
+  position: absolute;
+  background-color: transparent;
+  color: transparent;
+  width: 105px;
+  height: 37px;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+}
+
+/* Positionnement des boutons (ADAPTE LES VALEURS SELON TON IMAGE) */
+.brefactions1 {
+  top: 42.4%;
+  left: 80%;
+}
+
+.brefactions2 {
+  top: 94.85%;
+  left: 80%;
+}
+
+.brefpouvoirs {
+  top: 75.6%;
+  left: 78.5%;
+}
+
+/* Ancres */
+.anchor {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border-radius: 50%;
+
+  z-index: 10;
+  opacity: 0.8;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Positionner les ancres */
+#section1 {
+  top: 1.5%;
+  left: 50%;
+}
+#section2 {
+  top: 41.4%;
+  left: 50%;
+}
+#section3 {
+  top: 74.5%;
+  left: 50%;
+}
+#section4 {
+  top: 98%;
+  left: 50%;
+}
+#anchor-brefactions1 {
+  top: 72%;
+  left: 50%;
+}
+
+#anchor-brefactions2 {
+  top: 72%;
+  left: 50%;
+}
+
+#anchor-brefpouvoirs {
+  top: 93.8%;
+  left: 50%;
+}
+
+/* Réglage de la section FAQ */
+
+.faq-container {
+  font-family: 'Cormorant Infant', serif; /* Appliquer la police au contenu de la FAQ */
+}
+#faq {
+  padding: 20px;
+  background: #2d4765;
+  margin-left: 5.6%; /* Ajoute une marge à gauche */
+  margin-right: 5.32%; /* Ajoute une marge à droite */
+
+  align-items: center;
+}
+
+#faq h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+html {
+  scroll-behavior: smooth; /* Pour un défilement fluide */
+}
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 20px;
+  background: #2d4765;
+  border-radius: 8px;
+  border: 2px solid #f5e9cb;
+  font-family: 'Cormorant Infant', serif;
+  font-size: 2vh; /* Ajuste la taille si besoin */ /* Appliquer la police au contenu de la FAQ */
+}
+
+/* Titre de la FAQ */
+.faq-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #f5e9cb;
+  font-family: 'Cormorant Infant', serif; /* Appliquer la police au contenu de la FAQ */
+}
+
+/* Élément de la FAQ */
+.faq-item {
+  border-bottom: 1px solid #f5e9cb;
+  padding: 15px 0;
+  font-family: 'Cormorant Infant', serif; /* Appliquer la police au contenu de la FAQ */
+}
+
+/* Bouton de question */
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: serif;
+  color: #f5e9cb;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 10px;
+  font-family: 'Cormorant Infant', serif;
+  font-size: 2vh; /* Ajuste la taille si besoin */ /* Appliquer la police au contenu de la FAQ */
+}
+.faq-icon {
+  font-size: 1.5rem;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* Par défaut, on affiche le + */
+.faq-item .faq-question .faq-icon::before {
+  content: '+';
+  font-weight: serif;
+}
+
+/* Lorsque l'élément est actif, on affiche le - */
+.faq-item.active .faq-question .faq-icon::before {
+  content: '-';
+  font-weight: serif;
+  transform: rotate(45deg); /* Rotation du + en - */
+}
+
+/* Animation de la réponse (visible quand la classe 'active' est ajoutée) */
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  padding-top: 10px;
+  transition: max-height 0.3s ease-out;
+}
+
+.faq-item .faq-answer {
+  max-height: 0;
+  overflow: hidden;
+}
+
+/* Réponse cachée par défaut */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+
+  padding: 0 10px;
+  color: #f5e9cb;
+  font-family: 'Cormorant Infant', bold; /* Appliquer la police au contenu de la FAQ */
+  font-size: 1.5vh;
+}
+/* Formulaire de contact */
+#contact {
+  padding: 20px;
+  background: #2d4765;
+  text-align: center;
+  margin-left: 5.6%; /* Ajoute une marge à gauche */
+  margin-right: 5.32%; /* Ajoute une marge à droite */
+  font-family: 'Cormorant Infant', serif;
+
+  align-items: center;
+}
+
+#contact input,
+#contact textarea {
+  width: 80%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #f5e9cb;
+  border-radius: 5px;
+  font-family: 'Cormorant Infant', serif;
+  font-size: 2vh;
+}
+
+#contact button {
+  background: #f5e9cb;
+  color: #2d4765;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: 'Cormorant Infant', serif;
+  font-size: 2vh;
+}
+
+#contact button:hover {
+  background: #2d4765;
+}
+#contact-form div {
+  margin-bottom: 2rem;
+  font-family: 'Cormorant Infant', serif;
+  font-size: 2vh;
+}
+
+#email-section {
+  margin: top 1px;
+  font-family: 'Cormorant Infant', serif;
+}
+
+#contact form label {
+  font-size: 1rem; /* Taille du texte */
+  font-weight: serif; /* Mettre le texte en gras */
+  color: #f5e9cb; /* Couleur du texte */
+  font-family: 'Cormorant Infant', serif;
+  font-size: 2vh; /* Ajuste la taille si besoin */
+}
+
+#contact form input[type='checkbox'] {
+  margin-right: 10px; /* Ajouter de l'espace entre la case et le texte */
+}
+/* Aligner la case à cocher et le texte sur la même ligne */
+
+.center-container {
+  display: flex;
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center; /* Centrer verticalement */
+  height: 100vh; /* Utilise la hauteur de la fenêtre pour centrer le contenu verticalement */
+  width: 100%; /* Utilise toute la largeur de l'écran */
+}
+
+/* Conteneur pour la case à cocher et le texte */
+.checkbox-container {
+  display: flex;
+  align-items: center; /* Aligne verticalement la case et le texte */
+  justify-content: center;
+  gap: 10px; /* Crée un espace entre la case et le texte */
+}
+.checkbox-input {
+  display: none; /* Cache l'élément input natif */
+}
+
+.custom-checkbox {
+  width: 2vh; /* Taille de la case */
+  height: 2vh; /* Taille de la case */
+  border-radius: 70%; /* Rendre la case ronde */
+  border: 2px solid #f5e9cb; /* Bordure de la case */
+  appearance: none; /* Supprime l'apparence native de la case à cocher */
+  background-color: #2d4765; /* Couleur de fond de la case */
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Transition pour la couleur */
+  box-sizing: border-box; /* Assure que la bordure ne perturbe pas la taille */
+}
+
+.custom-checkbox::before {
+  content: ''; /* Pas de texte, juste un rond */
+  width: 1.5vh; /* Taille de l'intérieur plus petit que la case */
+  height: 1.5vh; /* Taille de l'intérieur plus petit que la case */
+  border-radius: 50%; /* Rond intérieur */
+  background-color: transparent; /* L'intérieur commence transparent */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centrer le rond intérieur */
+  transition: background-color 0.3s ease; /* Transition pour le changement de couleur */
+}
+
+.checkbox-input:checked + .checkbox-label .custom-checkbox::before {
+  background-color: #f5e9cb; /* Couleur de fond de l'intérieur quand la case est cochée */
+  transform: translate(-50%, -50%); /* Centrer le rond intérieur */
+}
+
+.checkbox-label .custom-checkbox {
+  margin-left: 10px; /* Espace entre la case et le texte */
+}
+
+.checkbox-label {
+  font-size: 1rem; /* Taille du texte */
+  font-weight: normal; /* Poids de police normal */
+  color: #f5e9cb; /* Couleur du texte */
+  display: flex; /* Utilise flex pour aligner la case et le texte */
+  align-items: center; /* Aligne verticalement */
+}
+
+#contact h2 {
+  font-family: 'Cormorant Infant', serif; /* Change la police */
+  font-size: 2vh; /* Ajuste la taille si besoin */
+  color: #f5e9cb; /* Change la couleur du texte */
+  text-align: center; /* Centre le texte (optionnel) */
+  margin-bottom: 10px; /* Ajuste l'espace sous le titre */
+}

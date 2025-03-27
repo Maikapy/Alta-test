@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ALTA - Règles du jeu</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@300;400;700&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- MENU FIXE -->
+    
+
+  <!-- Contenu principal du site (caché sur PC) -->
+  
+  </div>
+    <nav>
+      <button class="base" onclick="scrollToSection('section1')">
+        <img src="assets/base.png" alt="Base" />
+      </button>
+      <button class="actions" onclick="scrollToSection('section2')">
+        <img src="assets/actions.png" alt="Actions" />
+      </button>
+      <button class="pouvoirs" onclick="scrollToSection('section3')">
+        <img src="assets/pouvoirs.png" alt="Pouvoirs" />
+      </button>
+      <button class="faq" onclick="scrollToSection('section4')">
+        <img src="assets/faq.png" alt="FAQ" />
+      </button>
+    </nav>
+
+    <!-- Conteneur de l'image -->
+    <div id="game-image-container">
+      <img id="game-image" src="assets/regles.png" alt="Règles du jeu" />
+
+      <!-- Boutons fixes sur l'image -->
+      <button class="brefactions1" onclick="scrollToSection('anchor-brefactions1')">1</button>
+      <button class="brefactions2" onclick="scrollToSection('anchor-brefactions2')">Brefactions 2</button>
+      <button class="brefpouvoirs" onclick="scrollToSection('anchor-brefpouvoirs')">Brefpouvoirs</button>
+
+      <!-- Ancres -->
+      <div id="section1" class="anchor"></div>
+      <div id="section2" class="anchor"></div>
+      <div id="section3" class="anchor"></div>
+      <div id="section4" class="anchor"></div>
+      <div id="anchor-brefactions1" class="anchor"></div>
+      <div id="anchor-brefactions2" class="anchor"></div>
+      <div id="anchor-brefpouvoirs" class="anchor"></div>
+
+      
+     
+      
+      </div>
+    </div>
+
+    <!-- SECTION FAQ -->
+    <section id="faq">
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question">
+            Peut-on jouer à 5 joueurs ?
+            <span class="faq-icon"></span>
+          </button>
+          <div><p class="faq-answer">Oui, mais il vous faudra 2 decks ALTA pour avoir suffisamment de cartes. N’oubliez pas que seuls vos deux voisins de jeu sont vos rivaux.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Peut-on me défier avec deux Couronnes en même temps ?
+            <span class="faq-icon"></span>
+          </button>
+          <div><p class="faq-answer">Oui ! Il est donc risqué d’avoir deux Sentinelles Couronne dans votre jeu.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Est-ce que je peux gagner si l'une de mes Sentinelles est plus faible qu'une rivale ?
+            <span class="faq-icon"></span>
+          </button>
+          <div><p class="faq-answer">Oui, sauf si c’est la Sentinelle héroïque, c'est-à-dire celle qui vous a permis de passer à 7 points.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Si je place une gemme qui me fait passer à 6 points + 1 point pour le déplacement de la deuxième carte, est-ce que ma Sentinelle héroïque est la 2ème carte ou la gemme ?
+            <span class="faq-icon"></span>
+          </button>
+          <div><p class="faq-answer">C’est la gemme. La deuxième carte ne peut pas être une Sentinelle héroïque, car elle ne peut pas être une Sentinelle.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach((item) => {
+          const question = item.querySelector('.faq-question');
+          question.addEventListener('click', () => {
+            item.classList.toggle('active');
+          });
+        });
+      });
+    </script>
+
+    <!-- FORMULAIRE DE CONTACT -->
+    <section id="contact">
+      <h2>Des questions ? Des suggestions ? Vos idées peuvent améliorer le jeu pour toujours!</h2>
+      <form id="contact-form" action="https://formsubmit.co/wiedmer.raphael@gmail.com" method="POST">
+        <textarea name="message" placeholder="Votre message" required></textarea>
+        <div class="checkbox-container">
+          <input type="checkbox" id="response-checkbox" name="wants-response" class="checkbox-input" />
+          <label for="response-checkbox" class="checkbox-label">
+            Attendez-vous une réponse ?
+            <span class="custom-checkbox"></span>
+          </label>
+        </div>
+        <div id="email-section" style="display: none">
+          <input type="email" name="email" id="email" placeholder="Votre email (non-conservé)" required />
+        </div>
+        <input type="hidden" name="_subject" id="email-subject" value="Nouveau message sur ALTA">
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+
+    <script src="script.js"></script>
+
+    <footer style="background-color: #5c4e63; padding: 10px; text-align: center">
+      <p style="color: #f5e9cb; font-size: 14px">&copy; 2024 Emeraudegames, Tous droits réservés.</p>
+    </footer>
+  </body>
+</html>
