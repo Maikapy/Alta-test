@@ -61,22 +61,30 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-document.getElementById('response-checkbox').addEventListener('change', function () {
-  const emailField = document.getElementById('email');
-  const subjectField = document.getElementById('email-subject');
+document.addEventListener("DOMContentLoaded", function () {
+  const responseCheckbox = document.getElementById("response-checkbox");
+  const emailSection = document.getElementById("email-section");
+  const emailInput = document.getElementById("email");
+  const emailSubject = document.getElementById("email-subject");
+  const form = document.getElementById("contact-form");
 
-  if (this.checked) {
-    emailField.style.display = 'block';
-    emailField.required = true;
-  } else {
-    emailField.style.display = 'none';
-    emailField.required = false;
-  }
-});
+  // Afficher ou cacher le champ email si la case est cochée
+  responseCheckbox.addEventListener("change", function () {
+    if (this.checked) {
+      emailSection.style.display = "block";
+      emailInput.required = true;
+    } else {
+      emailSection.style.display = "none";
+      emailInput.required = false;
+    }
+  });
 
-document.getElementById('contact-form').addEventListener('submit', function () {
-  const email = document.getElementById('email').value;
-  if (document.getElementById('response-checkbox').checked && email) {
-    document.getElementById('email-subject').value = `Réponse demandée par ${email}`;
-  }
+  // Modifier l'objet du mail avant soumission
+  form.addEventListener("submit", function () {
+    if (responseCheckbox.checked && emailInput.value) {
+      emailSubject.value = "Réponse demandée - " + emailInput.value;
+    } else {
+      emailSubject.value = "Nouveau message sur ALTA";
+    }
+  });
 });

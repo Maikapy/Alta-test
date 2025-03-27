@@ -106,6 +106,7 @@
       <h2>Des questions ? Des suggestions ? Vos idées peuvent améliorer le jeu pour toujours!</h2>
       <form id="contact-form" action="https://formsubmit.co/wiedmer.raphael@gmail.com" method="POST">
         <textarea name="message" placeholder="Votre message" required></textarea>
+    
         <div class="checkbox-container">
           <input type="checkbox" id="response-checkbox" name="wants-response" class="checkbox-input" />
           <label for="response-checkbox" class="checkbox-label">
@@ -113,10 +114,14 @@
             <span class="custom-checkbox"></span>
           </label>
         </div>
+    
         <div id="email-section" style="display: none">
-          <input type="email" name="email" id="email" placeholder="Votre email (non-conservé)" required />
+          <input type="email" name="email" id="email" placeholder="Votre email (non-conservé)" />
         </div>
+    
+        <!-- Objet de l'email modifiable via JavaScript -->
         <input type="hidden" name="_subject" id="email-subject" value="Nouveau message sur ALTA">
+    
         <button type="submit">Envoyer</button>
       </form>
     </section>
