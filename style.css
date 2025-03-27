@@ -92,8 +92,8 @@ body {
   position: absolute;
   background-color: transparent;
   color: transparent;
-  width: 105px;
-  height: 37px;
+  width: 23%;
+  height: 3vh;
   border: none;
   padding: 12px;
   cursor: pointer;
@@ -103,17 +103,17 @@ body {
 
 /* Positionnement des boutons (ADAPTE LES VALEURS SELON TON IMAGE) */
 .brefactions1 {
-  top: 42.4%;
+  top: 42.65%;
   left: 80%;
 }
 
 .brefactions2 {
-  top: 94.85%;
+  top: 94.87%;
   left: 80%;
 }
 
 .brefpouvoirs {
-  top: 75.6%;
+  top: 75.7%;
   left: 78.5%;
 }
 
