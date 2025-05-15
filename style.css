@@ -406,3 +406,26 @@ html {
   text-align: center; /* Centre le texte (optionnel) */
   margin-bottom: 10px; /* Ajuste l'espace sous le titre */
 }
+.anchor-button {
+  position: absolute;
+  background-color: transparent;
+  z-index: 10;
+  cursor: pointer;
+  border: none;
+}
+
+/* Instagram : position + taille */
+.instagram-button {
+  top: 98.155%;         /* à ajuster */
+  left: 55%;        /* à ajuster */
+  width: 16vw;      /* largeur spécifique */
+  height: 4vh;      /* hauteur spécifique */
+}
+
+/* YouTube : position + taille */
+.youtube-button {
+  top: 1.8%;         /* à ajuster */
+  left: 20%;        /* à ajuster */
+  width: 60vw;       /* largeur spécifique */
+  height: 25vh;    /* hauteur spécifique */
+}
